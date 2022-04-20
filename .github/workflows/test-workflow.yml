@@ -15,7 +15,7 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y gcovr
     - name: build
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker receiver/testReceiver.cpp receiver/CalcMinMax.c receiver/CalcMovingAvg.c receiver/statistics.c
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o testchecker testReceiver.cpp receiver/CalcMinMax.c receiver/CalcMovingAvg.c receiver/statistics.c
       
     - name: run
       run: ./testchecker
