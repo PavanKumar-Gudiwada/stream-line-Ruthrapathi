@@ -2,7 +2,7 @@
 
 #include "test/catch.hpp"
 
-#include "statistics.h"
+#include "receiver/statistics.h"
 
 TEST_CASE("test with 3 sets of sensor input values") {
   float input1, input2;
