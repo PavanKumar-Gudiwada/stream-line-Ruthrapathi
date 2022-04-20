@@ -1,4 +1,10 @@
+struct results_t{
+	float *max;
+	float *min;
+	float *averages;
+};
 
-extern void printStats(float *averages, float *max, float *min);
 
-extern void calcStatistics(float input1,float input2, int srNo);
+extern void printStats(struct results_t result);
+
+extern struct results_t calcStatistics(float input1,float input2, int srNo);
