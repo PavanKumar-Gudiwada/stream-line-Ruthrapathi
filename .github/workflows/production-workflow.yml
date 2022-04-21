@@ -1,0 +1,17 @@
+name: run only production related SW
+
+on: [push, pull_request]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: build
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o productionchecker receiver/reciever.c receiver/CalcMinMax.c receiver/CalcMovingAvg.c receiver/statistics.c
+      
+    - name: run
+      run: ./driver        
