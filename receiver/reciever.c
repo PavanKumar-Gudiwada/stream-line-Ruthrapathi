@@ -4,10 +4,13 @@
 int main()
 {
 	float input1, input2;
+	struct results_t result;
+	
 	for(int i=0; i<50; i++)
 	{
 		scanf("%f,%f", &input1, &input2);
-		calcStatistics(input1, input2, i);
+		result = calcStatistics(input1, input2, i);
+		printStats(result);
 	}
 	
 	return 0;
