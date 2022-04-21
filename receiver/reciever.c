@@ -8,7 +8,7 @@ int main()
 	
 	for(int i=0; i<50; i++)
 	{
-		scanf("%f,%f", &input1, &input2);
+		scanf("{\"Temperature\":%0.2f,\"SOC\":%0.2f}", &input1, &input2);
 		result = calcStatistics(input1, input2, i);
 		printStats(result);
 	}
