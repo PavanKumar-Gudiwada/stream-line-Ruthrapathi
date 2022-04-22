@@ -7,14 +7,15 @@ static float averages[2] = {0.0f, 0.0f};
 
 void printStats(struct results_t result)
 {
-	printf("Average temperature: %f\n", result.averages[0]);
-	printf("Average SOC: %f\n", result.averages[1]);
+	printf("Temperature-> ");
+	printf("Average: %f ", result.averages[0]);
+	printf("Max: %f ", result.max[0]);
+	printf("Min: %f\n", result.min[0]);
 	
-	printf("Max Temperature: %f\n", result.max[0]);
-	printf("Max SOC: %f\n", result.max[1]);
-	
-	printf("Min Temperature: %f\n", result.min[0]);
-	printf("Min SOC: %f\n", result.min[1]);
+	printf("SOC-> ");
+	printf("Average: %f ", result.averages[1]);
+	printf("Max: %f ", result.max[1]);
+	printf("Min: %f\n", result.min[1]);
 }
 
 struct results_t calcStatistics(float input1,float input2, int srNo)
