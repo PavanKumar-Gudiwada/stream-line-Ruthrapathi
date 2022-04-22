@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "DataSender.h"
 
-void SendOperation(BatParam_val)
+void SendOperation(BatParam_test BatParam_val)
 {
     printf("{\"Temperature\":%0.2f,\"SOC\":%0.2f}\n",BatParam_val.Temperature,BatParam_val.Soc); // print in the console
     
