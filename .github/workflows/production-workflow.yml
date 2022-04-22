@@ -10,8 +10,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: build
-      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o productionchecker receiver/reciever.c receiver/CalcMinMax.c receiver/CalcMovingAvg.c receiver/statistics.c
+    - name: build sender
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o productionsender DataSender.c
+
+    - name: build receiver
+      run: g++ -Wall -Wextra -fprofile-arcs -ftest-coverage -o productionreceiver receiver/reciever.c receiver/CalcMinMax.c receiver/CalcMovingAvg.c receiver/statistics.c
       
     - name: run
-      run: ./productionchecker        
+      run: ./productionsender | ./productionreceiver        
