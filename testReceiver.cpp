@@ -4,6 +4,7 @@
 
 #include "receiver/statistics.h"
 #include "receiver/CalcMovingAvg.h"
+#include "receiver/CalcMinMax.h"
 
 TEST_CASE("test with 3 sets of sensor input values") {
   float input1, input2;
@@ -57,4 +58,12 @@ TEST_CASE("test summing of buffer") {
   float arr[5] = {1,2,3,4,5}, sum = 0;
 	sum = sumBuffer(arr);
 	REQUIRE(sum == 15 );
+}
+
+TEST_CASE("test min and max functions") {
+  	float max = MAXIMUM(10,2);
+	float min = MINIMUM(10,2);
+	
+	REQUIRE(max == 10 );
+	REQUIRE(min == 2 );
 }
