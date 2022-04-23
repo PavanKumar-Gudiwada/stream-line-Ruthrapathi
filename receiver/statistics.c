@@ -3,8 +3,6 @@
 #include "statistics.h"
 #include "CalcMovingAvg.h"
 
-static float averages[2] = {0.0f, 0.0f};
-
 void printStats(struct results_t result)
 {
 	printf("Temperature-> ");
