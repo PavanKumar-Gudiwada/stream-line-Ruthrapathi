@@ -29,7 +29,8 @@ struct results_t calcStatistics(float input1,float input2, int srNo)
 		result.min[1] = input2;
 	}
 	
-	result.averages = calcMvngAvg(input1,input2,srNo+1);
+	storeBuffer(input1,input2);
+	result.averages = calcMvngAvg(input1,input2);
 	result.max = calcMax(input1,input2);
 	result.min = calcMin(input1,input2);
 	
