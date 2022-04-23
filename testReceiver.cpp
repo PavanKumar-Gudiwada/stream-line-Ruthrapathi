@@ -14,8 +14,8 @@ TEST_CASE("test with 3 sets of sensor input values") {
 	printStats(result);
   
   
-  	REQUIRE(result.averages[0] == 0.2);
-	REQUIRE(result.averages[1] == 0.5);
+  	REQUIRE(result.averages[0] == 0.2F);
+	REQUIRE(result.averages[1] == 0.2F);
 	
 	REQUIRE(result.max[0] == 1);
 	REQUIRE(result.max[1] == 1);
@@ -28,8 +28,8 @@ TEST_CASE("test with 3 sets of sensor input values") {
 	result = calcStatistics(input1, input2, 1);
 	printStats(result);
   
-  	REQUIRE(result.averages[0] == 0.6);
-	REQUIRE(result.averages[1] == 0.6);
+  	REQUIRE(result.averages[0] == 0.6F);
+	REQUIRE(result.averages[1] == 0.6F);
 	
 	REQUIRE(result.max[0] == 2);
 	REQUIRE(result.max[1] == 2);
@@ -42,8 +42,8 @@ TEST_CASE("test with 3 sets of sensor input values") {
 	result = calcStatistics(input1, input2, 2);
 	printStats(result);
   
-  	REQUIRE(result.averages[0] == 1.2);
-	REQUIRE(result.averages[1] == 1.2);
+  	REQUIRE(result.averages[0] == 1.2F);
+	REQUIRE(result.averages[1] == 1.2F);
 	
 	REQUIRE(result.max[0] == 3);
 	REQUIRE(result.max[1] == 3);
